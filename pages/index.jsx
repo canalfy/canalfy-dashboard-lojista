@@ -1,4 +1,4 @@
-import { TitleArea, OverviewArea, DoubleBox } from './style'
+import { TitleArea, OverviewArea, DoubleBox } from '../src/styles/style'
 import Layout from '../src/components/layout'
 
 import { Line, Pie } from 'react-chartjs-2';

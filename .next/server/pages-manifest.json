@@ -1,7 +1,23 @@
 {
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
+  "/configuracoes/faturamento/faturas": "pages/configuracoes/faturamento/faturas.html",
+  "/configuracoes/faturamento/infos": "pages/configuracoes/faturamento/infos.html",
+  "/configuracoes/faturamento/metodos-de-pagamento": "pages/configuracoes/faturamento/metodos-de-pagamento.html",
+  "/configuracoes/faturamento/planos": "pages/configuracoes/faturamento/planos.html",
+  "/configuracoes/geral": "pages/configuracoes/geral.html",
+  "/configuracoes/loja": "pages/configuracoes/loja.html",
+  "/configuracoes/ofertas": "pages/configuracoes/ofertas.html",
+  "/configuracoes/termos-e-politicas": "pages/configuracoes/termos-e-politicas.html",
+  "/configuracoes/usuarios": "pages/configuracoes/usuarios.html",
+  "/gerenciamento/categoria-de-comissoes": "pages/gerenciamento/categoria-de-comissoes.html",
+  "/gerenciamento/criativo": "pages/gerenciamento/criativo.html",
+  "/gerenciamento/parceiros": "pages/gerenciamento/parceiros.html",
+  "/gerenciamento/pedidos": "pages/gerenciamento/pedidos.html",
+  "/gestao/comissoes": "pages/gestao/comissoes.html",
+  "/gestao/pagamentos": "pages/gestao/pagamentos.html",
+  "/": "pages/index.html",
+  "/login": "pages/login.html",
   "/_error": "pages/_error.js",
-  "/gerenciamento/pedidos": "pages/gerenciamento/pedidos.js",
-  "/gestao/comissoes": "pages/gestao/comissoes.js"
+  "/404": "pages/404.html"
 }
