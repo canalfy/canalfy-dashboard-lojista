@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Link from 'next/link'
 
 import { TitleArea, FilterArea, TabArea } from '../../../src/styles/gerenciamento/pedidos'
@@ -8,6 +9,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload, faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 
 function ConversionManagement() {
+    
+    const [show, setShow] = useState(false)
+
+    function showOptions() {
+        setShow(!show)
+    }
+
     return (
         <>
             <Layout>
@@ -49,8 +57,10 @@ function ConversionManagement() {
                                 <th>Código do Pedido</th>
                                 <th>Data</th>
                                 <th>Parceiro Responsável</th>
-                                <th>Local da Venda</th>
-                                <th>Pagamento</th>
+                                <th>Cliente</th>
+                                <th>Forma de Pagamento</th>
+                                <th>Data de Pagamento</th>
+                                <th>Cupom</th>
                                 <th>Status</th>
                                 <th>Valor</th>
                                 <th>Ações</th>
@@ -62,22 +72,22 @@ function ConversionManagement() {
                                 <th>1036302</th>
                                 <td>12/08/2021</td>
                                 <td>John Doe</td>
-                                <td>Loja Virtual</td>
+                                <td>John Doe Jr.</td>
                                 <td>Mercado Pago</td>
-                                <td>Aguardando envio</td>
-                                <td>R$ 356,00</td>
-                                <td><FontAwesomeIcon icon={faEllipsisV}></FontAwesomeIcon></td>
-                            </tr>
-
-                            <tr>
-                                <th>1036302</th>
                                 <td>12/08/2021</td>
-                                <td>Janne Doe</td>
-                                <td>Loja Virtual</td>
-                                <td>Mercado Pago</td>
+                                <td>Não</td>
                                 <td>Aguardando envio</td>
                                 <td>R$ 356,00</td>
-                                <td><FontAwesomeIcon icon={faEllipsisV}></FontAwesomeIcon></td>
+                                <td className="actions">
+                                    <FontAwesomeIcon icon={faEllipsisV} onClick={showOptions}></FontAwesomeIcon>
+
+                                    {
+                                        show?
+                                            <div className="options">
+                                                <li><Link href="/"><a>Ver pedido</a></Link></li>
+                                            </div>:null
+                                    }
+                                </td>
                             </tr>
                         </tbody>
                     </table>

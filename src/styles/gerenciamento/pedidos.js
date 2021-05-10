@@ -124,7 +124,7 @@ export const TabArea = styled.div`
 
     table tr {
         display: grid;
-        grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(10, 1fr);
         gap: 20px;
         justify-content: center;
         align-items: center;
@@ -142,6 +142,36 @@ export const TabArea = styled.div`
     table tr th, table tr td {
         font-size: 1.2rem;
         text-align: left;
+    }
+
+    .actions {
+        position: relative;
+
+        .options {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            padding: 20px;
+
+            background: #152937;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,.15);
+
+            z-index: 20;
+
+            li {
+                list-style: none;
+            }
+
+            a {
+                color: rgba(255, 255, 255, 0.8);
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
     }
 
     @media screen and (max-width: 768px) {

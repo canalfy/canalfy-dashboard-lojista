@@ -44,73 +44,83 @@ export const TitleArea = styled.div`
     }
 `
 
-export const FilterArea = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: auto;
+export const Content = styled.div`
+    form {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+        align-items: flex-end;
 
-    .filters {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
+        .input {
+            label {
+                display: block;
 
-        .input:first-child {
-            margin-right: 10px;
-        }
+                font-size: 1.2rem;
+                line-height: 2rem;
+                font-weight: 700;
+                color: rgba(255,255,255,.6);
+            }
 
-        .input:last-child {
-            margin-left: 10px;
-        }
+            input[type="text"], input[type="email"], input[type="url"] {
+                width: 100%;
+                height: 40px;
+                padding: 10px 20px;
+                margin-top: 5px;
 
-        .input label {
-            display: block;
-
-            font-size: 1.2rem;
-            line-height: 2rem;
-            font-weight: 700;
-            color: rgba(255,255,255,.6);
-        }
-
-        .input select {
-            padding: 10px 20px;
-            margin-top: 5px;
-
-            background: transparent;
-            border: 1px solid rgba(255,255,255,.4);
-
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: rgba(255,255,255,.6);
-
-            option {
-                background: #0e1b25;
+                background: transparent;
+                border-radius: 5px;
+                border: 1px solid rgba(255,255,255,.4);
 
                 font-size: 1.2rem;
                 font-weight: 700;
                 color: rgba(255,255,255,.6);
             }
-        }
-    }
 
-    .download {
-        svg {
-            width: auto !important;
+            select {
+                width: 100%;
+                height: 40px;
+                padding: 10px 20px;
+                margin-top: 5px;
 
-            cursor: pointer;
-        }
+                background: transparent;
+                border-radius: 5px;
+                border: 1px solid rgba(255,255,255,.4);
 
-        .svg-inline--fa {
-            height: 15px !important;
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: rgba(255,255,255,.6);
+
+                option {
+                    background: #0e1b25;
+
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    color: rgba(255,255,255,.6);
+                }
+            }
+
+            button {
+                width: 100%;
+                height: 40px;
+
+                background: #01C253;
+                border-radius: 5px;
+                border: none;
+
+                appearance: none;
+                cursor: pointer;
+
+                font-size: 1.4rem;
+                font-weight: 700;
+                color: rgba(255,255,255,.8);
+            }
         }
     }
 
     @media screen and (max-width: 768px) {
-        display: block;
-
-        .filters {
-            margin-bottom: 20px;
+        form {
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 `
@@ -170,6 +180,38 @@ export const TabArea = styled.div`
             width: 100%;
 
             transition: width .5s ease-in-out;
+        }
+    }
+
+    .actions {
+        position: relative;
+
+        .options {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            padding: 20px;
+
+            background: #152937;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,.15);
+
+            z-index: 20;
+
+            li {
+                list-style: none;
+            }
+
+            a {
+                font-size: 1.2rem;
+                line-height: 3rem;
+                color: rgba(255, 255, 255, 0.8);
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 

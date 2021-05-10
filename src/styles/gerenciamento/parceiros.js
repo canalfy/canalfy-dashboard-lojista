@@ -152,6 +152,38 @@ export const TabArea = styled.div`
         text-align: left;
     }
 
+    .actions {
+        position: relative;
+
+        .options {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            padding: 20px;
+
+            background: #152937;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,.15);
+
+            z-index: 20;
+
+            li {
+                list-style: none;
+            }
+
+            a {
+                font-size: 1.2rem;
+                line-height: 3rem;
+                color: rgba(255, 255, 255, 0.8);
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
     @media screen and (max-width: 768px) {
         overflow-x: scroll;
         min-width: 100vh;

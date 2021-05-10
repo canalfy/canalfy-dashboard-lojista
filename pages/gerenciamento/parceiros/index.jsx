@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Link from 'next/link'
 
 import { TitleArea, FilterArea, TabArea } from '../../../src/styles/gerenciamento/parceiros'
@@ -8,6 +9,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload, faPlus, faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 
 function PartnersManagement() {
+
+    const [show, setShow] = useState(false)
+
+    function showOptions() {
+        setShow(!show)
+    }
+
     return (
         <>
             <Layout>
@@ -65,17 +73,18 @@ function PartnersManagement() {
                                 <td>120</td>
                                 <td>R$ 356,00</td>
                                 <td>Ativo</td>
-                                <td><FontAwesomeIcon icon={faEllipsisV}></FontAwesomeIcon></td>
-                            </tr>
+                                <td className="actions">
+                                    <FontAwesomeIcon icon={faEllipsisV} onClick={showOptions}></FontAwesomeIcon>
 
-                            <tr>
-                                <th>Janne Doe</th>
-                                <td>Oferta Padrão 10%</td>
-                                <td>R$ 3.560,00</td>
-                                <td>120</td>
-                                <td>R$ 356,00</td>
-                                <td>Ativo</td>
-                                <td><FontAwesomeIcon icon={faEllipsisV}></FontAwesomeIcon></td>
+                                    {
+                                        show?
+                                            <div className="options">
+                                                <li><Link href="/"><a>Ver Dados Cadastrais</a></Link></li>
+                                                <li><Link href="/"><a>Editar</a></Link></li>
+                                                <li><Link href="/"><a>Excluir</a></Link></li>
+                                            </div>:null
+                                    }
+                                </td>
                             </tr>
                         </tbody>
                     </table>

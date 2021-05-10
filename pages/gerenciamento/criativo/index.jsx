@@ -1,13 +1,21 @@
+import { useState } from 'react'
 import Link from 'next/link'
 
-import { TitleArea, FilterArea, TabArea } from '../../../src/styles/gerenciamento/criativo'
+import { TitleArea, Content, TabArea } from '../../../src/styles/gerenciamento/criativo'
 
 import Layout from '../../../src/components/layout'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faEllipsisV } from "@fortawesome/free-solid-svg-icons";
+import { faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 
 function CreativeManagement() {
+
+    const [show, setShow] = useState(false)
+
+    function showOptions() {
+        setShow(!show)
+    }
+
     return (
         <>
             <Layout>
@@ -16,21 +24,28 @@ function CreativeManagement() {
                     <div className="title"><h2>Criativos</h2></div>
                 </TitleArea>
 
-                <FilterArea>
-                    <div className="filters">
+                <Content>
+                    <form>
                         <div class="input">
-                            <label for="filters-tab">Filtrar por</label>
-                            <select name="filters-tab" id="filters-tab">
-                                <option value="padrao">Padrão</option>
-                                <option value="Nome">Nome</option>
-                            </select>
+                            <label for="title-creative">Título da Campanha*</label>
+                            <input type="text" placeholder="" name="title-creative" id="title-creative" />
                         </div>
-                    </div>
-                    
-                    <div className="download">
-                        <FontAwesomeIcon icon={faPlus}></FontAwesomeIcon>
-                    </div>
-                </FilterArea>
+
+                        <div class="input">
+                            <label for="description-creative">Descrição*</label>
+                            <input type="text" placeholder="" name="description-creative" id="description-creative" />
+                        </div>
+
+                        <div class="input">
+                            <label for="link-creative">Link do Arquivo*</label>
+                            <input type="url" placeholder="" name="link-creative" id="link-creative" />
+                        </div>
+
+                        <div class="input input-submit">
+                            <button type="submit">Salvar</button>
+                        </div>
+                    </form>
+                </Content>
 
                 <TabArea>
                     <table>
@@ -50,7 +65,17 @@ function CreativeManagement() {
                                 <th>Post de Parceria</th>
                                 <td>Arte para post no Instagram</td>
                                 <td><Link href="/">Acessar arquivo</Link></td>
-                                <td><FontAwesomeIcon icon={faEllipsisV}></FontAwesomeIcon></td>
+                                <td className="actions">
+                                    <FontAwesomeIcon icon={faEllipsisV} onClick={showOptions}></FontAwesomeIcon>
+
+                                    {
+                                        show?
+                                            <div className="options">
+                                                <li><Link href="/"><a>Editar</a></Link></li>
+                                                <li><Link href="/"><a>Excluir</a></Link></li>
+                                            </div>:null
+                                    }
+                                </td>
                             </tr>
                         </tbody>
                     </table>
