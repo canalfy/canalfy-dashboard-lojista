@@ -75,7 +75,7 @@ function MyApp({
   return /*#__PURE__*/(0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
     children: [/*#__PURE__*/jsx_runtime_.jsx((head_default()), {
       children: /*#__PURE__*/jsx_runtime_.jsx("title", {
-        children: "T\xEDtulo"
+        children: "Dashboard Canalfy"
       })
     }), /*#__PURE__*/jsx_runtime_.jsx(global, {}), /*#__PURE__*/jsx_runtime_.jsx(Component, _objectSpread({}, pageProps))]
   });

@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
     return (
         <>
             <Head>
-                <title>Título</title>
+                <title>Dashboard Canalfy</title>
             </Head>
             <GlobalStyle />
             <Component {...pageProps} />
