@@ -105,6 +105,14 @@ export const FilterArea = styled.div`
             height: 15px !important;
         }
     }
+
+    @media screen and (max-width: 768px) {
+        display: block;
+
+        .filters {
+            margin-bottom: 20px;
+        }
+    }
 `
 
 export const TabArea = styled.div`
@@ -116,7 +124,7 @@ export const TabArea = styled.div`
 
     table tr {
         display: grid;
-        grid-template-columns: 1fr 2fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
         gap: 20px;
         justify-content: center;
         align-items: center;
@@ -162,6 +170,19 @@ export const TabArea = styled.div`
             width: 100%;
 
             transition: width .5s ease-in-out;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        overflow-x: scroll;
+        min-width: 100vh;
+
+        table {
+            min-width: 100%;
+        }
+
+        table tr th, table tr th {
+            min-width: 150px;
         }
     }
 `

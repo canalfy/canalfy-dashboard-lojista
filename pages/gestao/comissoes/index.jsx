@@ -5,7 +5,7 @@ import { TitleArea, FilterArea, TabArea } from '../../../src/styles/gestao/comis
 import Layout from '../../../src/components/layout'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import { faDownload, faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 
 function ComissionManagement() {
     return (
@@ -53,6 +53,7 @@ function ComissionManagement() {
                                 <th>Data de Pagamento</th>
                                 <th>Status</th>
                                 <th>Comprovante</th>
+                                <th>Ações</th>
                             </tr>
                         </thead>
 
@@ -65,6 +66,7 @@ function ComissionManagement() {
                                 <td>12/08/2021</td>
                                 <td>A pagar</td>
                                 <td>--</td>
+                                <td><FontAwesomeIcon icon={faEllipsisV}></FontAwesomeIcon></td>
                             </tr>
 
                             <tr>
@@ -75,6 +77,7 @@ function ComissionManagement() {
                                 <td>12/08/2021</td>
                                 <td>A pagar</td>
                                 <td>--</td>
+                                <td><FontAwesomeIcon icon={faEllipsisV}></FontAwesomeIcon></td>
                             </tr>
                         </tbody>
                     </table>

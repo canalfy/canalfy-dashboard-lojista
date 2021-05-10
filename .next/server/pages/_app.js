@@ -40,6 +40,8 @@ const GlobalStyle = external_styled_components_.createGlobalStyle`
         color: rgba(255, 255, 255, 0.85);
 
         background: #0e1b25;
+
+        overflow-x: hidden;
     }
 
     html, body, #__next {

@@ -1,6 +1,6 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
-import { GroupArea, TitleBar, Menu } from './style'
+import { GroupArea, TitleBar, Menu } from './style';
 
 function Sidebar() {
     return (
@@ -27,11 +27,18 @@ function Sidebar() {
                 <TitleBar>Configurações</TitleBar>
                 <Menu>
                     <li><Link href="/configuracoes/geral"><span>Geral</span></Link></li>
+                    <li><Link href="/configuracoes/perfil"><span>Perfil</span></Link></li>
                     <li><Link href="/configuracoes/loja"><span>Loja</span></Link></li>
                     <li><Link href="/configuracoes/ofertas"><span>Ofertas</span></Link></li>
                     <li><Link href="/configuracoes/termos-e-politicas"><span>Termos e Políticas</span></Link></li>
                     <li><Link href="/configuracoes/usuarios"><span>Usuários</span></Link></li>
                     <li><Link href="/configuracoes/faturamento"><span>Faturamento</span></Link></li>
+                </Menu>
+            </GroupArea>
+
+            <GroupArea>
+                <Menu>
+                    <li><Link href="/login"><span>Logout</span></Link></li>
                 </Menu>
             </GroupArea>
         </div>

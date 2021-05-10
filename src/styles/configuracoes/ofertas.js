@@ -45,65 +45,82 @@ export const TitleArea = styled.div`
 `
 
 export const Content = styled.div`
-    .input {
-        margin: 20px 0;
+    form {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(7, 1fr);
+        justify-content: center;
+        align-items: flex-end;
 
-        label {
-            display: block;
+        .input {
+            label {
+                display: block;
 
-            font-size: 1.2rem;
-            line-height: 2rem;
-            font-weight: 700;
-            color: rgba(255,255,255,.6);
-        }
+                font-size: 1.2rem;
+                line-height: 2rem;
+                font-weight: 700;
+                color: rgba(255,255,255,.6);
+            }
 
-        input[type="text"], input[type="email"], input[type="tel"] {
-            width: 320px;
-            padding: 10px 20px;
-            margin-top: 5px;
+            input[type="text"], input[type="email"], input[type="tel"] {
+                width: 100%;
+                height: 40px;
+                padding: 10px 20px;
+                margin-top: 5px;
 
-            background: transparent;
-            border: 1px solid rgba(255,255,255,.4);
-
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: rgba(255,255,255,.6);
-        }
-
-        select {
-            width: 320px;
-            padding: 10px 20px;
-            margin-top: 5px;
-
-            background: transparent;
-            border: 1px solid rgba(255,255,255,.4);
-
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: rgba(255,255,255,.6);
-
-            option {
-                background: #0e1b25;
+                background: transparent;
+                border-radius: 5px;
+                border: 1px solid rgba(255,255,255,.4);
 
                 font-size: 1.2rem;
                 font-weight: 700;
                 color: rgba(255,255,255,.6);
             }
+
+            select {
+                width: 100%;
+                height: 40px;
+                padding: 10px 20px;
+                margin-top: 5px;
+
+                background: transparent;
+                border-radius: 5px;
+                border: 1px solid rgba(255,255,255,.4);
+
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: rgba(255,255,255,.6);
+
+                option {
+                    background: #0e1b25;
+
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    color: rgba(255,255,255,.6);
+                }
+            }
+
+            button {
+                width: 100%;
+                height: 40px;
+
+                background: #01C253;
+                border-radius: 5px;
+                border: none;
+
+                appearance: none;
+                cursor: pointer;
+
+                font-size: 1.4rem;
+                font-weight: 700;
+                color: rgba(255,255,255,.8);
+            }
         }
+    }
 
-        button {
-            padding: 20px 40px;
-
-            background: #01C253;
-            border-radius: 5px;
-            border: none;
-
-            appearance: none;
-            cursor: pointer;
-
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: rgba(255,255,255,.8);
+    @media screen and (max-width: 768px) {
+        form {
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 `
@@ -117,7 +134,7 @@ export const TabArea = styled.div`
 
     table tr {
         display: grid;
-        grid-template-columns: repeat(5,1fr);
+        grid-template-columns: repeat(7,1fr);
         gap: 20px;
         justify-content: center;
         align-items: center;
@@ -135,5 +152,18 @@ export const TabArea = styled.div`
     table tr th, table tr td {
         font-size: 1.2rem;
         text-align: left;
+    }
+
+    @media screen and (max-width: 768px) {
+        overflow-x: scroll;
+        min-width: 100vh;
+
+        table {
+            min-width: 100%;
+        }
+
+        table tr th, table tr th {
+            min-width: 150px;
+        }
     }
 `

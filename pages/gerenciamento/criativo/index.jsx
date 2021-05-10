@@ -36,15 +36,17 @@ function CreativeManagement() {
                     <table>
                         <thead>
                             <tr>
+                                <th>Data</th>
                                 <th>Título</th>
                                 <th>Descrição</th>
                                 <th>Link do Arquivo</th>
-                                <th></th>
+                                <th>Ações</th>
                             </tr>
                         </thead>
 
                         <tbody>
                             <tr>
+                                <th>21/12/2020</th>
                                 <th>Post de Parceria</th>
                                 <td>Arte para post no Instagram</td>
                                 <td><Link href="/">Acessar arquivo</Link></td>

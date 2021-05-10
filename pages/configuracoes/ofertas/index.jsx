@@ -38,7 +38,7 @@ function OffersConfig() {
                         </div>
 
                         <div class="input">
-                            <label for="cuppom-offers">Valor de desconto do cupom (em %, apenas para atribuição por cupom)*</label>
+                            <label for="cuppom-offers">Valor de desconto do cupom (em %)*</label>
                             <input type="text" placeholder="" name="cuppom-offers" id="cuppom-offers" />
                         </div>
 
@@ -68,20 +68,34 @@ function OffersConfig() {
                     <table>
                         <thead>
                             <tr>
-                                <th>Oferta</th>
-                                <th>Tipo</th>
-                                <th>Receita</th>
-                                <th>Afiliados</th>
-                                <th></th>
+                                <th>Nome da Oferta</th>
+                                <th>Forma de Atribuição</th>
+                                <th>Valor da Comissão</th>
+                                <th>Desconto do Cupom</th>
+                                <th>Produtos Elegíveis</th>
+                                <th>Parceiros Elegíveis</th>
+                                <th>Ações</th>
                             </tr>
                         </thead>
 
                         <tbody>
                             <tr>
                                 <th>Parceiro Standard</th>
-                                <td>Percentual de Venda</td>
-                                <td>R$ 3.560,00</td>
-                                <td>2</td>
+                                <td>ID</td>
+                                <td>10%</td>
+                                <td></td>
+                                <td>Todos</td>
+                                <td>Todos</td>
+                                <td><FontAwesomeIcon icon={faEllipsisV}></FontAwesomeIcon></td>
+                            </tr>
+
+                            <tr>
+                                <th>Cupom Influencer</th>
+                                <td>Cupom</td>
+                                <td></td>
+                                <td>15%</td>
+                                <td>Todos</td>
+                                <td>Todos</td>
                                 <td><FontAwesomeIcon icon={faEllipsisV}></FontAwesomeIcon></td>
                             </tr>
                         </tbody>

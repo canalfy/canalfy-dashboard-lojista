@@ -113,6 +113,14 @@ export const FilterArea = styled.div`
             height: 15px !important;
         }
     }
+
+    @media screen and (max-width: 768px) {
+        display: block;
+
+        .filters {
+            margin-bottom: 20px;
+        }
+    }
 `
 
 export const TabArea = styled.div`
@@ -142,5 +150,18 @@ export const TabArea = styled.div`
     table tr th, table tr td {
         font-size: 1.2rem;
         text-align: left;
+    }
+
+    @media screen and (max-width: 768px) {
+        overflow-x: scroll;
+        min-width: 100vh;
+
+        table {
+            min-width: 100%;
+        }
+
+        table tr th, table tr th {
+            min-width: 150px;
+        }
     }
 `

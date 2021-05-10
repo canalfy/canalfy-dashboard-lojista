@@ -10,6 +10,10 @@ export const HeaderLayout = styled.header`
     height: 80px;
 
     background: #152937;
+
+    @media screen and (max-width: 520px) {
+        height: auto;
+    }
 `
 
 export const FullLayout = styled.section`
@@ -18,6 +22,10 @@ export const FullLayout = styled.section`
     gap: 30px;
     justify-content: flex-start;
     align-items: flex-start;
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
 `
 
 export const AsideArea = styled.aside`
@@ -26,6 +34,10 @@ export const AsideArea = styled.aside`
     padding: 20px;
 
     background: #122330;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 `
 
 export const ContentArea = styled.div`
