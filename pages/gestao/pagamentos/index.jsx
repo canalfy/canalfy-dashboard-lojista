@@ -18,20 +18,18 @@ function PaymentManagement() {
 
                 <Content>
                     <form>
-                        <div class="input">
+                        {/* <div class="input">
                             <label for="config-status">Fechamento mensal</label>
                             <select name="config-status" id="config-status">
                                 <option value="Pedido Aprovado">Pedido Aprovado</option>
                                 <option value="Pedido Pendente">Pedido Pendente</option>
                             </select>
-                        </div>
+                        </div> */}
 
                         <div class="input">
                             <label for="config-payment">Pagamento</label>
                             <select name="config-payment" id="config-payment">
                                 <option value="Mensal">Mensal</option>
-                                <option value="Quinzenal">Quinzenal</option>
-                                <option value="Semanal">Semanal</option>
                             </select>
                         </div>
 
@@ -39,8 +37,6 @@ function PaymentManagement() {
                             <label for="config-available">Disponível em xx dias após o pagamento</label>
                             <select name="config-available" id="config-available">
                                 <option value="30">30</option>
-                                <option value="15">15</option>
-                                <option value="01">01</option>
                             </select>
                         </div>
 
