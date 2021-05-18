@@ -175,15 +175,49 @@ export const TabArea = styled.div`
     }
 
     @media screen and (max-width: 768px) {
-        overflow-x: scroll;
-        min-width: 100vh;
-
-        table {
-            min-width: 100%;
+        table tr {
+            display: block;
+            height: auto;
+            padding: 20px 0;
         }
 
-        table tr th, table tr th {
-            min-width: 150px;
+        table, thead, tbody, th, td, tr { 
+            display: block; 
         }
+
+        thead tr { 
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+        td {
+            border: none;
+            position: relative;
+            padding-left: 50%;
+            height: 30px;
+            line-height: 3rem;
+        }
+
+        td:before { 
+            position: absolute;
+            top: 0;
+            left: 6px;
+            width: 45%; 
+            padding-right: 10px; 
+            white-space: nowrap;
+            font-weight: bold;
+        }
+
+        td:nth-of-type(1):before { content: "Código"; }
+        td:nth-of-type(2):before { content: "Data"; }
+        td:nth-of-type(3):before { content: "Parceiro Responsável"; }
+        td:nth-of-type(4):before { content: "Cliente"; }
+        td:nth-of-type(5):before { content: "Forma de Pagamento"; }
+        td:nth-of-type(6):before { content: "Data de Pagamento"; }
+        td:nth-of-type(7):before { content: "Cupom"; }
+        td:nth-of-type(8):before { content: "Status"; }
+        td:nth-of-type(9):before { content: "Valor"; }
+        td:nth-of-type(10):before { content: "Ações"; }
     }
 `

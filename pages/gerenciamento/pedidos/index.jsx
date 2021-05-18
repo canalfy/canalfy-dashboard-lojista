@@ -69,7 +69,7 @@ function ConversionManagement() {
 
                         <tbody>
                             <tr>
-                                <th>1036302</th>
+                                <td>1036302</td>
                                 <td>12/08/2021</td>
                                 <td>John Doe</td>
                                 <td>John Doe Jr.</td>
