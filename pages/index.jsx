@@ -11,7 +11,7 @@ const pedidosChart = {
         fill: false,
         lineTension: 0.1,
         backgroundColor: '#086930',
-        borderColor: '#2EC76E',
+        borderColor: '#086930',
         borderCapStyle: 'butt',
         borderDash: [],
         borderDashOffset: 0.0,
@@ -26,27 +26,66 @@ const pedidosChart = {
         pointRadius: 1,
         pointHitRadius: 10,
         data: [65, 59, 80, 81]
+      },
+      {
+        label: 'Receita',
+        fill: false,
+        lineTension: 0.1,
+        backgroundColor: '#03A346',
+        borderColor: '#03A346',
+        borderCapStyle: 'butt',
+        borderDash: [],
+        borderDashOffset: 0.0,
+        borderJoinStyle: 'miter',
+        pointBorderColor: '#6bfafa',
+        pointBackgroundColor: '#fff',
+        pointBorderWidth: 1,
+        pointHoverRadius: 5,
+        pointHoverBackgroundColor: '#03A346',
+        pointHoverBorderColor: '#01C253',
+        pointHoverBorderWidth: 2,
+        pointRadius: 1,
+        pointHitRadius: 10,
+        data: [32, 120, 100, 85]
+      },
+      {
+        label: 'Parceiros',
+        fill: false,
+        lineTension: 0.1,
+        backgroundColor: '#2EC76E',
+        borderColor: '#2EC76E',
+        borderCapStyle: 'butt',
+        borderDash: [],
+        borderDashOffset: 0.0,
+        borderJoinStyle: 'miter',
+        pointBorderColor: '#6bfafa',
+        pointBackgroundColor: '#fff',
+        pointBorderWidth: 1,
+        pointHoverRadius: 5,
+        pointHoverBackgroundColor: '#03A346',
+        pointHoverBorderColor: '#01C253',
+        pointHoverBorderWidth: 2,
+        pointRadius: 1,
+        pointHitRadius: 10,
+        data: [80, 72, 75, 78]
       }
     ]
 };
 
 const fonteChart = {
 	labels: [
-		'Google',
-		'Facebook',
-		'Direto'
+		'ID',
+		'Cupom',
 	],
 	datasets: [{
-		data: [300, 50, 100],
+		data: [300, 50],
 		backgroundColor: [
 		'#086930',
 		'#03A346',
-		'#2EC76E'
 		],
 		hoverBackgroundColor: [
 		'#086930',
 		'#03A346',
-		'#2EC76E'
 		]
 	}]
 };
@@ -63,27 +102,35 @@ function HomePage() {
                 <OverviewArea>
                     <div className="boxOne">
                         <span className="title">Total de Receitas</span>
-                        <span className="value">R$ 3.560.000,00</span>
+                        <span className="value">R$ 560.000,00</span>
                     </div>
                     <div className="boxTwo">
-                        <span className="title">Total de Comissões</span>
-                        <span className="value">R$ 3.560,00</span>
+                        <span className="title">Total de Pedidos</span>
+                        <span className="value">520</span>
                     </div>
                     <div className="boxThree">
-                        <span className="title">Taxa de Conversão</span>
-                        <span className="value">35%</span>
+                        <span className="title">Total de Parceiros</span>
+                        <span className="value">32</span>
                     </div>
                     <div className="boxFour">
-                        <span className="title">Total de Afiliados</span>
-                        <span className="value">1.560</span>
+                        <span className="title">Parceiros com Pedidos</span>
+                        <span className="value">30</span>
+                    </div>
+                    <div className="boxFive">
+                        <span className="title">Ticket Médio</span>
+                        <span className="value">R$ 320,00</span>
+                    </div>
+                    <div className="boxSix">
+                        <span className="title">Taxa de Conversão</span>
+                        <span className="value">5%</span>
                     </div>
                 </OverviewArea>
 
                 <DoubleBox>
                     <div className="boxOne">
                         <div className="titleBox">
-                            <span className="title">Pedidos do mês</span>
-                            <span className="description">Confira um gráfico com os pedidos do mês atual</span>
+                            <span className="title">Resultados do mês</span>
+                            <span className="description">Confira um gráfico com os resultados do mês atual</span>
                         </div>
 
                         <div className="chartBox">
@@ -97,7 +144,7 @@ function HomePage() {
 
                     <div className="boxTwo">
                         <div className="titleBox">
-                            <span className="title">Fonte do Pedido</span>
+                            <span className="title">Origem dos Pedidos</span>
                             <span className="description">Confira um gráfico de onde vem os pedidos</span>
                         </div>
 

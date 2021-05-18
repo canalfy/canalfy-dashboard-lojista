@@ -21,12 +21,12 @@ export const TitleArea = styled.div`
 
 export const OverviewArea = styled.div`
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 20px;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 150px;
+    height: auto;
     margin-bottom: 20px;
 
     .boxOne {
@@ -39,7 +39,7 @@ export const OverviewArea = styled.div`
 
         .title {
             display: block;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             
             color: rgba(255, 255, 255, 1);
             font-size: 1.2rem;
@@ -53,8 +53,8 @@ export const OverviewArea = styled.div`
             display: block;
             
             color: rgba(255, 255, 255, 1);
-            font-size: 2.8rem;
-            line-height: 3.2rem;
+            font-size: 2rem;
+            line-height: 3rem;
             font-weight: 700;
             text-transform: uppercase;
         }
@@ -70,7 +70,7 @@ export const OverviewArea = styled.div`
 
         .title {
             display: block;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             
             color: rgba(255, 255, 255, 1);
             font-size: 1.2rem;
@@ -84,8 +84,8 @@ export const OverviewArea = styled.div`
             display: block;
             
             color: rgba(255, 255, 255, 1);
-            font-size: 2.8rem;
-            line-height: 3.2rem;
+            font-size: 2rem;
+            line-height: 3rem;
             font-weight: 700;
             text-transform: uppercase;
         }
@@ -101,7 +101,7 @@ export const OverviewArea = styled.div`
 
         .title {
             display: block;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             
             color: rgba(255, 255, 255, 1);
             font-size: 1.2rem;
@@ -115,8 +115,8 @@ export const OverviewArea = styled.div`
             display: block;
             
             color: rgba(255, 255, 255, 1);
-            font-size: 2.8rem;
-            line-height: 3.2rem;
+            font-size: 2rem;
+            line-height: 3rem;
             font-weight: 700;
             text-transform: uppercase;
         }
@@ -132,7 +132,7 @@ export const OverviewArea = styled.div`
 
         .title {
             display: block;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             
             color: rgba(255, 255, 255, 1);
             font-size: 1.2rem;
@@ -146,8 +146,70 @@ export const OverviewArea = styled.div`
             display: block;
             
             color: rgba(255, 255, 255, 1);
-            font-size: 2.8rem;
-            line-height: 3.2rem;
+            font-size: 2rem;
+            line-height: 3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+
+    .boxFive {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+
+        background: #086930;
+        border-radius: 5px;
+
+        .title {
+            display: block;
+            margin-bottom: 10px;
+            
+            color: rgba(255, 255, 255, 1);
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+            font-weight: 700;
+            letter-spacing: .15rem;
+            text-transform: uppercase;
+        }
+
+        .value {
+            display: block;
+            
+            color: rgba(255, 255, 255, 1);
+            font-size: 2rem;
+            line-height: 3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+
+    .boxSix {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+
+        background: #086930;
+        border-radius: 5px;
+
+        .title {
+            display: block;
+            margin-bottom: 10px;
+            
+            color: rgba(255, 255, 255, 1);
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+            font-weight: 700;
+            letter-spacing: .15rem;
+            text-transform: uppercase;
+        }
+
+        .value {
+            display: block;
+            
+            color: rgba(255, 255, 255, 1);
+            font-size: 2rem;
+            line-height: 3rem;
             font-weight: 700;
             text-transform: uppercase;
         }
