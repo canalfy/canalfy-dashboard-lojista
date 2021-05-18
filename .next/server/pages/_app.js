@@ -4,7 +4,7 @@ exports.id = 888;
 exports.ids = [888];
 exports.modules = {
 
-/***/ 2848:
+/***/ 7224:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18,6 +18,9 @@ __webpack_require__.d(__webpack_exports__, {
 
 // EXTERNAL MODULE: external "react/jsx-runtime"
 var jsx_runtime_ = __webpack_require__(5282);
+;// CONCATENATED MODULE: external "next/router"
+var router_namespaceObject = require("next/router");;
+var router_default = /*#__PURE__*/__webpack_require__.n(router_namespaceObject);
 ;// CONCATENATED MODULE: external "next/head"
 var head_namespaceObject = require("next/head");;
 var head_default = /*#__PURE__*/__webpack_require__.n(head_namespaceObject);
@@ -51,6 +54,9 @@ const GlobalStyle = external_styled_components_.createGlobalStyle`
 /* harmony default export */ var global = (GlobalStyle);
 ;// CONCATENATED MODULE: external "@fortawesome/fontawesome-svg-core"
 var fontawesome_svg_core_namespaceObject = require("@fortawesome/fontawesome-svg-core");;
+;// CONCATENATED MODULE: external "nprogress"
+var external_nprogress_namespaceObject = require("nprogress");;
+var external_nprogress_default = /*#__PURE__*/__webpack_require__.n(external_nprogress_namespaceObject);
 ;// CONCATENATED MODULE: ./pages/_app.js
 
 
@@ -66,17 +72,29 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
+
 fontawesome_svg_core_namespaceObject.config.autoAddCss = false;
+router_default().events.on('routeChangeStart', url => {
+  console.log(`Loading: ${url}`);
+  external_nprogress_default().start();
+});
+router_default().events.on('routeChangeComplete', () => external_nprogress_default().done());
+router_default().events.on('routeChangeError', () => external_nprogress_default().done());
 
 function MyApp({
   Component,
   pageProps
 }) {
   return /*#__PURE__*/(0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
-    children: [/*#__PURE__*/jsx_runtime_.jsx((head_default()), {
-      children: /*#__PURE__*/jsx_runtime_.jsx("title", {
+    children: [/*#__PURE__*/(0,jsx_runtime_.jsxs)((head_default()), {
+      children: [/*#__PURE__*/jsx_runtime_.jsx("title", {
         children: "Dashboard Canalfy"
-      })
+      }), /*#__PURE__*/jsx_runtime_.jsx("link", {
+        rel: "stylesheet",
+        type: "text/css",
+        href: "/nprogress.css"
+      })]
     }), /*#__PURE__*/jsx_runtime_.jsx(global, {}), /*#__PURE__*/jsx_runtime_.jsx(Component, _objectSpread({}, pageProps))]
   });
 }
@@ -108,7 +126,7 @@ module.exports = require("styled-components");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = function(moduleId) { return __webpack_require__(__webpack_require__.s = moduleId); }
-var __webpack_exports__ = (__webpack_exec__(2848));
+var __webpack_exports__ = (__webpack_exec__(7224));
 module.exports = __webpack_exports__;
 
 })();
