@@ -26,22 +26,22 @@ function CreativeManagement() {
 
                 <Content>
                     <form>
-                        <div class="input">
+                        <div className="input">
                             <label for="title-creative">Título da Campanha*</label>
                             <input type="text" placeholder="" name="title-creative" id="title-creative" />
                         </div>
 
-                        <div class="input">
+                        <div className="input">
                             <label for="description-creative">Descrição*</label>
                             <input type="text" placeholder="" name="description-creative" id="description-creative" />
                         </div>
 
-                        <div class="input">
+                        <div className="input">
                             <label for="link-creative">Link do Arquivo*</label>
                             <input type="url" placeholder="" name="link-creative" id="link-creative" />
                         </div>
 
-                        <div class="input input-submit">
+                        <div className="input input-submit">
                             <button type="submit">Salvar</button>
                         </div>
                     </form>
@@ -61,8 +61,8 @@ function CreativeManagement() {
 
                         <tbody>
                             <tr>
-                                <th>21/12/2020</th>
-                                <th>Post de Parceria</th>
+                                <td>21/12/2020</td>
+                                <td>Post de Parceria</td>
                                 <td>Arte para post no Instagram</td>
                                 <td><Link href="/">Acessar arquivo</Link></td>
                                 <td className="actions">

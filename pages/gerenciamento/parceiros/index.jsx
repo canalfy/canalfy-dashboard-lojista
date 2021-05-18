@@ -26,7 +26,7 @@ function PartnersManagement() {
 
                 <FilterArea>
                     <div className="filters">
-                        <div class="input">
+                        <div className="input">
                             <label for="filters-tab">Filtrar por</label>
                             <select name="filters-tab" id="filters-tab">
                                 <option value="padrao">Padrão</option>
@@ -35,7 +35,7 @@ function PartnersManagement() {
                             </select>
                         </div>
 
-                        <div class="input">
+                        <div className="input">
                             <label for="filters-status">Status</label>
                             <select name="filters-status" id="filters-status">
                                 <option value="padrao">Padrão</option>
@@ -67,7 +67,7 @@ function PartnersManagement() {
 
                         <tbody>
                             <tr>
-                                <th>John Doe</th>
+                                <td><strong>John Doe</strong></td>
                                 <td>Oferta Padrão 10%</td>
                                 <td>R$ 3.560,00</td>
                                 <td>120</td>

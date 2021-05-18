@@ -18,7 +18,7 @@ function ComissionManagement() {
 
                 <FilterArea>
                     <div className="filters">
-                        <div class="input">
+                        <div className="input">
                             <label for="filters-tab">Filtrar por</label>
                             <select name="filters-tab" id="filters-tab">
                                 <option value="padrao">Padrão</option>
@@ -27,7 +27,7 @@ function ComissionManagement() {
                             </select>
                         </div>
 
-                        <div class="input">
+                        <div className="input">
                             <label for="filters-status">Status</label>
                             <select name="filters-status" id="filters-status">
                                 <option value="padrao">Padrão</option>
@@ -59,18 +59,7 @@ function ComissionManagement() {
 
                         <tbody>
                             <tr>
-                                <th>John Doe</th>
-                                <td>R$ 3.560,00</td>
-                                <td>120</td>
-                                <td>R$ 356,00</td>
-                                <td>12/08/2021</td>
-                                <td>A pagar</td>
-                                <td>--</td>
-                                <td><FontAwesomeIcon icon={faEllipsisV}></FontAwesomeIcon></td>
-                            </tr>
-
-                            <tr>
-                                <th>Janne Doe</th>
+                                <td>John Doe</td>
                                 <td>R$ 3.560,00</td>
                                 <td>120</td>
                                 <td>R$ 356,00</td>
