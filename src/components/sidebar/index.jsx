@@ -20,7 +20,6 @@ function Sidebar() {
                 <TitleBar>Gestão de Pagamento</TitleBar>
                 <Menu>
                     <li><Link href="/gestao/comissoes"><a><span>Comissões</span></a></Link></li>
-                    <li><Link href="/gestao/pagamentos"><a><span>Repasse</span></a></Link></li>
                 </Menu>
             </GroupArea>
 
@@ -28,12 +27,11 @@ function Sidebar() {
                 <TitleBar>Configurações</TitleBar>
                 <Menu>
                     <li><Link href="/configuracoes/geral"><a><span>Geral</span></a></Link></li>
-                    <li><Link href="/configuracoes/perfil"><a><span>Perfil</span></a></Link></li>
                     <li><Link href="/configuracoes/loja"><a><span>Loja</span></a></Link></li>
                     <li><Link href="/configuracoes/ofertas"><a><span>Ofertas</span></a></Link></li>
+                    <li><Link href="/configuracoes/pagamentos"><a><span>Repasse</span></a></Link></li>
                     <li><Link href="/configuracoes/termos-e-politicas"><a><span>Termos e Políticas</span></a></Link></li>
                     <li><Link href="/configuracoes/usuarios"><a><span>Usuários</span></a></Link></li>
-                    <li><Link href="/configuracoes/faturamento"><a><span>Faturamento</span></a></Link></li>
                 </Menu>
             </GroupArea>
 

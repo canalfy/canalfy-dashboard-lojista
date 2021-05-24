@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Link from 'next/link'
 
 import { TitleArea, FilterArea, TabArea } from '../../../src/styles/gerenciamento/parceiros'
@@ -6,7 +5,7 @@ import { TitleArea, FilterArea, TabArea } from '../../../src/styles/gerenciament
 import Layout from '../../../src/components/layout'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload, faPlus, faExternalLinkAlt, faBan } from "@fortawesome/free-solid-svg-icons";
+import { faDownload, faPlus, faExternalLinkAlt, faBan, faFilter } from "@fortawesome/free-solid-svg-icons";
 
 function PartnersManagement() {
     return (
@@ -34,6 +33,10 @@ function PartnersManagement() {
                     </div>
                     
                     <div className="download">
+                        <span className="filter-trigger">
+                            Filtrar Pedidos
+                            <FontAwesomeIcon icon={faFilter}></FontAwesomeIcon>
+                        </span>
                         <span className="export-btn">
                             Novo Parceiro
                             <FontAwesomeIcon icon={faPlus}></FontAwesomeIcon>
@@ -71,8 +74,12 @@ function PartnersManagement() {
                                 <td><span className="success">Completo</span></td>
                                 <td className="actions">
                                     <span className="ico-action">
-                                        <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon>
-                                        <span className="tooltip">Ver pedido</span>
+                                        <Link href="/gerenciamento/perfil">
+                                            <a>
+                                                <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon>
+                                                <span className="tooltip">Ver pedido</span>
+                                            </a>
+                                        </Link>
                                     </span>
                                     <span className="ico-action">
                                         <FontAwesomeIcon icon={faBan}></FontAwesomeIcon>

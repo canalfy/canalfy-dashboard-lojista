@@ -6,7 +6,7 @@ import { TitleArea, FilterArea, TabArea } from '../../../src/styles/gerenciament
 import Layout from '../../../src/components/layout'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload, faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
+import { faDownload, faExternalLinkAlt, faFilter } from "@fortawesome/free-solid-svg-icons";
 
 function ConversionManagement() {
     return (
@@ -34,6 +34,10 @@ function ConversionManagement() {
                     </div>
                     
                     <div className="download">
+                        <span className="filter-trigger">
+                            Filtrar Pedidos
+                            <FontAwesomeIcon icon={faFilter}></FontAwesomeIcon>
+                        </span>
                         <span className="export-btn">
                             Exportar Excel
                             <FontAwesomeIcon icon={faDownload}></FontAwesomeIcon>

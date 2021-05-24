@@ -103,10 +103,34 @@ export const FilterArea = styled.div`
 
             background: #01C253;
             border-radius: 5px;
+            border: 1px solid #01C253;
 
             color: #fff;
             font-size: 1.2rem;
             font-weight: 800;
+
+            cursor: pointer;
+
+            svg {
+                width: auto !important;
+                margin-left: 5px;
+            }
+
+            .svg-inline--fa {
+                height: 15px !important;
+            }
+        }
+        .filter-trigger {
+            padding: 10px 20px;
+
+            background: #0e1b25;
+            border-radius: 5px;
+            border: 1px solid #01C253;
+
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 800;
+            letter-spacing: .05rem;
 
             cursor: pointer;
 
@@ -160,6 +184,11 @@ export const TabArea = styled.div`
             position: relative;
 
             cursor: pointer;
+
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
 
             svg {
                 width: auto !important;

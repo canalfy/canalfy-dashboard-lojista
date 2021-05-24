@@ -94,15 +94,46 @@ export const FilterArea = styled.div`
     }
 
     .download {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+
         .export-btn {
             padding: 10px 20px;
 
             background: #01C253;
             border-radius: 5px;
+            border: 1px solid #01C253;
 
             color: #fff;
             font-size: 1.2rem;
             font-weight: 800;
+            letter-spacing: .05rem;
+
+            cursor: pointer;
+
+            svg {
+                width: auto !important;
+                margin-left: 5px;
+            }
+
+            .svg-inline--fa {
+                height: 15px !important;
+            }
+        }
+
+        .filter-trigger {
+            padding: 10px 20px;
+
+            background: #0e1b25;
+            border-radius: 5px;
+            border: 1px solid #01C253;
+
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 800;
+            letter-spacing: .05rem;
 
             cursor: pointer;
 
