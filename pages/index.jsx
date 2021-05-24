@@ -100,27 +100,27 @@ function HomePage() {
                 </TitleArea>
 
                 <OverviewArea>
-                    <div className="boxOne">
+                    <div className="box">
                         <span className="title">Total de Receitas</span>
                         <span className="value">R$ 560.000,00</span>
                     </div>
-                    <div className="boxTwo">
+                    <div className="box">
                         <span className="title">Total de Pedidos</span>
                         <span className="value">520</span>
                     </div>
-                    <div className="boxThree">
+                    <div className="box">
                         <span className="title">Total de Parceiros</span>
                         <span className="value">32</span>
                     </div>
-                    <div className="boxFour">
+                    <div className="box">
                         <span className="title">Parceiros com Pedidos</span>
                         <span className="value">30</span>
                     </div>
-                    <div className="boxFive">
+                    <div className="box">
                         <span className="title">Ticket Médio</span>
                         <span className="value">R$ 320,00</span>
                     </div>
-                    <div className="boxSix">
+                    <div className="box">
                         <span className="title">Taxa de Conversão</span>
                         <span className="value">5%</span>
                     </div>

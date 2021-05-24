@@ -21,7 +21,7 @@ export const TitleArea = styled.div`
 
 export const OverviewArea = styled.div`
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     justify-content: center;
     align-items: center;
@@ -29,167 +29,12 @@ export const OverviewArea = styled.div`
     height: auto;
     margin-bottom: 20px;
 
-    .boxOne {
+    .box {
         width: 100%;
         height: 100%;
         padding: 20px;
 
-        background: #2EC76E;
-        border-radius: 5px;
-
-        .title {
-            display: block;
-            margin-bottom: 10px;
-            
-            color: rgba(255, 255, 255, 1);
-            font-size: 1.2rem;
-            line-height: 1.8rem;
-            font-weight: 700;
-            letter-spacing: .15rem;
-            text-transform: uppercase;
-        }
-
-        .value {
-            display: block;
-            
-            color: rgba(255, 255, 255, 1);
-            font-size: 2rem;
-            line-height: 3rem;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-    }
-
-    .boxTwo {
-        width: 100%;
-        height: 100%;
-        padding: 20px;
-
-        background: #01C253;
-        border-radius: 5px;
-
-        .title {
-            display: block;
-            margin-bottom: 10px;
-            
-            color: rgba(255, 255, 255, 1);
-            font-size: 1.2rem;
-            line-height: 1.8rem;
-            font-weight: 700;
-            letter-spacing: .15rem;
-            text-transform: uppercase;
-        }
-
-        .value {
-            display: block;
-            
-            color: rgba(255, 255, 255, 1);
-            font-size: 2rem;
-            line-height: 3rem;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-    }
-
-    .boxThree {
-        width: 100%;
-        height: 100%;
-        padding: 20px;
-
-        background: #03A346;
-        border-radius: 5px;
-
-        .title {
-            display: block;
-            margin-bottom: 10px;
-            
-            color: rgba(255, 255, 255, 1);
-            font-size: 1.2rem;
-            line-height: 1.8rem;
-            font-weight: 700;
-            letter-spacing: .15rem;
-            text-transform: uppercase;
-        }
-
-        .value {
-            display: block;
-            
-            color: rgba(255, 255, 255, 1);
-            font-size: 2rem;
-            line-height: 3rem;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-    }
-
-    .boxFour {
-        width: 100%;
-        height: 100%;
-        padding: 20px;
-
-        background: #086930;
-        border-radius: 5px;
-
-        .title {
-            display: block;
-            margin-bottom: 10px;
-            
-            color: rgba(255, 255, 255, 1);
-            font-size: 1.2rem;
-            line-height: 1.8rem;
-            font-weight: 700;
-            letter-spacing: .15rem;
-            text-transform: uppercase;
-        }
-
-        .value {
-            display: block;
-            
-            color: rgba(255, 255, 255, 1);
-            font-size: 2rem;
-            line-height: 3rem;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-    }
-
-    .boxFive {
-        width: 100%;
-        height: 100%;
-        padding: 20px;
-
-        background: #086930;
-        border-radius: 5px;
-
-        .title {
-            display: block;
-            margin-bottom: 10px;
-            
-            color: rgba(255, 255, 255, 1);
-            font-size: 1.2rem;
-            line-height: 1.8rem;
-            font-weight: 700;
-            letter-spacing: .15rem;
-            text-transform: uppercase;
-        }
-
-        .value {
-            display: block;
-            
-            color: rgba(255, 255, 255, 1);
-            font-size: 2rem;
-            line-height: 3rem;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-    }
-
-    .boxSix {
-        width: 100%;
-        height: 100%;
-        padding: 20px;
-
-        background: #086930;
+        background: #152937;
         border-radius: 5px;
 
         .title {

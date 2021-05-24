@@ -38,9 +38,16 @@ export const TitleArea = styled.div`
     }
 
     h2 {
+        margin-bottom: 20px;
+
         font-size: 4.2rem;
         line-height: 6rem;
         color: rgba(255,255,255,.8);
+    }
+
+    p {
+        font-size: 1.4rem;
+        line-height: 2rem;
     }
 `
 
@@ -134,23 +141,16 @@ export const TabArea = styled.div`
 
     table tr {
         display: grid;
-        grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
+        grid-template-columns: repeat(6, 1fr);
         gap: 20px;
         justify-content: center;
         align-items: center;
         height: 40px;
     }
 
-    table tbody tr {
-        &:hover {
-            background: rgba(255, 255, 255, 0.05);
-
-            cursor: pointer;
-        }
-    }
-
     table tr th, table tr td {
         font-size: 1.2rem;
+        line-height: 1.6rem;
         text-align: left;
     }
 
@@ -184,33 +184,38 @@ export const TabArea = styled.div`
     }
 
     .actions {
-        position: relative;
+        display: flex;
+        gap: 10px;
 
-        .options {
-            position: absolute;
-            top: 20px;
-            left: 0;
-            padding: 20px;
+        .ico-action {
+            position: relative;
 
-            background: #152937;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,.15);
+            cursor: pointer;
 
-            z-index: 20;
-
-            li {
-                list-style: none;
+            svg {
+                width: auto !important;
+                height: 13px;
             }
 
-            a {
-                font-size: 1.2rem;
-                line-height: 3rem;
-                color: rgba(255, 255, 255, 0.8);
-                text-decoration: none;
+            .tooltip {
+                position: absolute;
+                top: -25px;
+                left: -50%;
 
-                &:hover {
-                    text-decoration: underline;
-                }
+                padding: 5px 15px;
+
+                content: '';
+
+                background: #fff;
+                border-radius: 15px;
+
+                color: #212121;
+
+                display: none;
+            }
+
+            &:hover .tooltip {
+                display: block;
             }
         }
     }
@@ -219,7 +224,7 @@ export const TabArea = styled.div`
         table tr {
             display: block;
             height: auto;
-            padding: 20px;
+            padding: 20px 0;
         }
 
         table, thead, tbody, th, td, tr { 
@@ -236,8 +241,8 @@ export const TabArea = styled.div`
             border: none;
             position: relative;
             padding-left: 50%;
-            height: 30px;
-            line-height: 3rem;
+            height: 40px;
+            line-height: 4rem;
         }
 
         td:before { 
@@ -254,6 +259,7 @@ export const TabArea = styled.div`
         td:nth-of-type(2):before { content: "Título"; }
         td:nth-of-type(3):before { content: "Descrição"; }
         td:nth-of-type(4):before { content: "Link do Arquivo"; }
-        td:nth-of-type(5):before { content: "Ações"; }
+        td:nth-of-type(5):before { content: "Status"; }
+        td:nth-of-type(6):before { content: "Ações"; }
     }
 `

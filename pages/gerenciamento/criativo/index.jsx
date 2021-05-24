@@ -6,28 +6,23 @@ import { TitleArea, Content, TabArea } from '../../../src/styles/gerenciamento/c
 import Layout from '../../../src/components/layout'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEllipsisV } from "@fortawesome/free-solid-svg-icons";
+import { faBan, faEdit, faTrash, faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 
 function CreativeManagement() {
-
-    const [show, setShow] = useState(false)
-
-    function showOptions() {
-        setShow(!show)
-    }
-
     return (
         <>
             <Layout>
                 <TitleArea>
                     <div className="breadcrumb"><Link href="/">Dashboard</Link> / Criativos</div>
                     <div className="title"><h2>Criativos</h2></div>
+
+                    <p>Acompanhe suas campanhas de marketing ou crie novas. Você também pode desativar, editar ou excluir criativos existentes.</p>
                 </TitleArea>
 
                 <Content>
                     <form>
                         <div className="input">
-                            <label for="title-creative">Título da Campanha*</label>
+                            <label for="title-creative">Criativo*</label>
                             <input type="text" placeholder="" name="title-creative" id="title-creative" />
                         </div>
 
@@ -55,6 +50,7 @@ function CreativeManagement() {
                                 <th>Título</th>
                                 <th>Descrição</th>
                                 <th>Link do Arquivo</th>
+                                <th>Status</th>
                                 <th>Ações</th>
                             </tr>
                         </thead>
@@ -64,17 +60,26 @@ function CreativeManagement() {
                                 <td>21/12/2020</td>
                                 <td>Post de Parceria</td>
                                 <td>Arte para post no Instagram</td>
-                                <td><Link href="/">Acessar arquivo</Link></td>
+                                <td>
+                                    <Link href="/">
+                                        <a>Acessar arquivo <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon>
+                                        </a>
+                                    </Link>
+                                </td>
+                                <td><span className="success">Ativo</span></td>
                                 <td className="actions">
-                                    <FontAwesomeIcon icon={faEllipsisV} onClick={showOptions}></FontAwesomeIcon>
-
-                                    {
-                                        show?
-                                            <div className="options">
-                                                <li><Link href="/"><a>Editar</a></Link></li>
-                                                <li><Link href="/"><a>Excluir</a></Link></li>
-                                            </div>:null
-                                    }
+                                    <span className="ico-action">
+                                        <FontAwesomeIcon icon={faBan}></FontAwesomeIcon>
+                                        <span className="tooltip">Desativar</span>
+                                    </span>
+                                    <span className="ico-action">
+                                        <FontAwesomeIcon icon={faEdit}></FontAwesomeIcon>
+                                        <span className="tooltip">Editar</span>
+                                    </span>
+                                    <span className="ico-action">
+                                        <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
+                                        <span className="tooltip">Excluir</span>
+                                    </span>
                                 </td>
                             </tr>
                         </tbody>

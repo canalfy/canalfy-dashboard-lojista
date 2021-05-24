@@ -6,47 +6,38 @@ import { TitleArea, FilterArea, TabArea } from '../../../src/styles/gerenciament
 import Layout from '../../../src/components/layout'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload, faEllipsisV } from "@fortawesome/free-solid-svg-icons";
+import { faDownload, faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 
 function ConversionManagement() {
-    
-    const [show, setShow] = useState(false)
-
-    function showOptions() {
-        setShow(!show)
-    }
-
     return (
         <>
             <Layout>
                 <TitleArea>
                     <div className="breadcrumb"><Link href="/">Dashboard</Link> / Pedidos</div>
                     <div className="title"><h2>Pedidos</h2></div>
+
+                    <p>Acompanhe os pedidos de todos os seus parceiros. Utilize os filtros para encontrar os pedidos desejados e exporte em Excel sempre que quiser.</p>
                 </TitleArea>
 
                 <FilterArea>
-                    <div className="filters">
+                    <div className="orders">
                         <div className="input">
-                            <label for="filters-tab">Filtrar por</label>
-                            <select name="filters-tab" id="filters-tab">
+                            <label for="order-tab">Ordenar por</label>
+                            <select name="order-tab" id="order-tab">
                                 <option value="padrao">Padrão</option>
-                                <option value="nome">Nome</option>
-                                <option value="Oferta">Oferta</option>
-                            </select>
-                        </div>
-
-                        <div className="input">
-                            <label for="filters-status">Status</label>
-                            <select name="filters-status" id="filters-status">
-                                <option value="padrao">Padrão</option>
-                                <option value="Ativo">Ativo</option>
-                                <option value="Pendente">Pendente</option>
+                                <option value="Menor Valor">Menor Valor</option>
+                                <option value="Maior Valor">Maior Valor</option>
+                                <option value="Mais Recentes">Mais Recentes</option>
+                                <option value="Mais Antigos">Mais Antigos</option>
                             </select>
                         </div>
                     </div>
                     
                     <div className="download">
-                        <FontAwesomeIcon icon={faDownload}></FontAwesomeIcon>
+                        <span className="export-btn">
+                            Exportar Excel
+                            <FontAwesomeIcon icon={faDownload}></FontAwesomeIcon>
+                        </span>
                     </div>
                 </FilterArea>
 
@@ -79,14 +70,10 @@ function ConversionManagement() {
                                 <td>Aguardando envio</td>
                                 <td>R$ 356,00</td>
                                 <td className="actions">
-                                    <FontAwesomeIcon icon={faEllipsisV} onClick={showOptions}></FontAwesomeIcon>
-
-                                    {
-                                        show?
-                                            <div className="options">
-                                                <li><Link href="/"><a>Ver pedido</a></Link></li>
-                                            </div>:null
-                                    }
+                                    <span className="ico-action">
+                                        <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon>
+                                        <span className="tooltip">Ver pedido</span>
+                                    </span>
                                 </td>
                             </tr>
                         </tbody>

@@ -5,7 +5,7 @@ import { TitleArea, FilterArea, TabArea } from '../../../src/styles/gerenciament
 import Layout from '../../../src/components/layout'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faEllipsisV } from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faEdit } from "@fortawesome/free-solid-svg-icons";
 
 function ComissionCategory() {
     return (
@@ -14,31 +14,29 @@ function ComissionCategory() {
                 <TitleArea>
                     <div className="breadcrumb"><Link href="/">Dashboard</Link> / Categorias de Comissão</div>
                     <div className="title"><h2>Categorias de Comissão</h2></div>
+
+                    <p>Acompanhe abaixo as suas categorias de comissão, saiba a quantidade de parceiros em cada uma e acompanhe as receitas.</p>
                 </TitleArea>
 
                 <FilterArea>
-                    <div className="filters">
+                    <div className="orders">
                         <div className="input">
-                            <label for="filters-tab">Filtrar por</label>
-                            <select name="filters-tab" id="filters-tab">
+                            <label for="orders-tab">Ordenar por</label>
+                            <select name="orders-tab" id="orders-tab">
                                 <option value="padrao">Padrão</option>
-                                <option value="nome">Nome</option>
-                                <option value="Tipo">Tipo</option>
-                            </select>
-                        </div>
-
-                        <div className="input">
-                            <label for="filters-status">Status</label>
-                            <select name="filters-status" id="filters-status">
-                                <option value="padrao">Padrão</option>
-                                <option value="Percentual de Venda">Percentual de Venda</option>
-                                <option value="Vale Brinde">Vale Brinde</option>
+                                <option value="Maior Receita">Maior Receita</option>
+                                <option value="Menor Receita">Menor Receita</option>
+                                <option value="Mais Parceiros">Mais Parceiros</option>
+                                <option value="Menos Parceiros">Menos Parceiros</option>
                             </select>
                         </div>
                     </div>
                     
                     <div className="download">
-                        <FontAwesomeIcon icon={faPlus}></FontAwesomeIcon>
+                        <span className="export-btn">
+                            Nova Categoria
+                            <FontAwesomeIcon icon={faPlus}></FontAwesomeIcon>
+                        </span>
                     </div>
                 </FilterArea>
 
@@ -49,8 +47,9 @@ function ComissionCategory() {
                                 <th>Oferta</th>
                                 <th>Tipo</th>
                                 <th>Receita</th>
-                                <th>Afiliados</th>
-                                <th></th>
+                                <th>% de Parceiros</th>
+                                <th>Total de Parceiros</th>
+                                <th>Ações</th>
                             </tr>
                         </thead>
 
@@ -59,8 +58,14 @@ function ComissionCategory() {
                                 <td>Parceiro Standard</td>
                                 <td>Percentual de Venda</td>
                                 <td>R$ 3.560,00</td>
-                                <td>2</td>
-                                <td><FontAwesomeIcon icon={faEllipsisV}></FontAwesomeIcon></td>
+                                <td>100%</td>
+                                <td>2500</td>
+                                <td className="actions">
+                                    <span className="ico-action">
+                                        <FontAwesomeIcon icon={faEdit}></FontAwesomeIcon>
+                                        <span className="tooltip">Editar</span>
+                                    </span>
+                                </td>
                             </tr>
                         </tbody>
                     </table>

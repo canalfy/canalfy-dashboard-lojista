@@ -6,48 +6,42 @@ import { TitleArea, FilterArea, TabArea } from '../../../src/styles/gerenciament
 import Layout from '../../../src/components/layout'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload, faPlus, faEllipsisV } from "@fortawesome/free-solid-svg-icons";
+import { faDownload, faPlus, faExternalLinkAlt, faBan } from "@fortawesome/free-solid-svg-icons";
 
 function PartnersManagement() {
-
-    const [show, setShow] = useState(false)
-
-    function showOptions() {
-        setShow(!show)
-    }
-
     return (
         <>
             <Layout>
                 <TitleArea>
                     <div className="breadcrumb"><Link href="/">Dashboard</Link> / Parceiros</div>
                     <div className="title"><h2>Parceiros</h2></div>
+
+                    <p>Confira e analise a performance dos seus parceiros, filtre conforme desejar, adicione novos parceiros e exporte para Excel quando quiser.</p>
                 </TitleArea>
 
                 <FilterArea>
-                    <div className="filters">
+                    <div className="orders">
                         <div className="input">
-                            <label for="filters-tab">Filtrar por</label>
-                            <select name="filters-tab" id="filters-tab">
+                            <label for="orders-tab">Ordenar por</label>
+                            <select name="orders-tab" id="orders-tab">
                                 <option value="padrao">Padrão</option>
-                                <option value="nome">Nome</option>
-                                <option value="Oferta">Oferta</option>
-                            </select>
-                        </div>
-
-                        <div className="input">
-                            <label for="filters-status">Status</label>
-                            <select name="filters-status" id="filters-status">
-                                <option value="padrao">Padrão</option>
-                                <option value="Ativo">Ativo</option>
-                                <option value="Pendente">Pendente</option>
+                                <option value="Maior Receita">Maior Receita</option>
+                                <option value="Menor Receita">Menor Receita</option>
+                                <option value="Maior Comissão">Maior Comissão</option>
+                                <option value="Menor Comissão">Menor Comissão</option>
                             </select>
                         </div>
                     </div>
                     
                     <div className="download">
-                        <FontAwesomeIcon icon={faPlus}></FontAwesomeIcon>
-                        <FontAwesomeIcon icon={faDownload}></FontAwesomeIcon>
+                        <span className="export-btn">
+                            Novo Parceiro
+                            <FontAwesomeIcon icon={faPlus}></FontAwesomeIcon>
+                        </span>
+                        <span className="export-btn">
+                            Exportar Excel
+                            <FontAwesomeIcon icon={faDownload}></FontAwesomeIcon>
+                        </span>
                     </div>
                 </FilterArea>
 
@@ -61,6 +55,7 @@ function PartnersManagement() {
                                 <th>Pedidos</th>
                                 <th>Comissão</th>
                                 <th>Status</th>
+                                <th>Cadastro</th>
                                 <th>Ações</th>
                             </tr>
                         </thead>
@@ -72,18 +67,17 @@ function PartnersManagement() {
                                 <td>R$ 3.560,00</td>
                                 <td>120</td>
                                 <td>R$ 356,00</td>
-                                <td>Ativo</td>
+                                <td><span className="success">Ativo</span></td>
+                                <td><span className="success">Completo</span></td>
                                 <td className="actions">
-                                    <FontAwesomeIcon icon={faEllipsisV} onClick={showOptions}></FontAwesomeIcon>
-
-                                    {
-                                        show?
-                                            <div className="options">
-                                                <li><Link href="/"><a>Ver Dados Cadastrais</a></Link></li>
-                                                <li><Link href="/"><a>Editar</a></Link></li>
-                                                <li><Link href="/"><a>Excluir</a></Link></li>
-                                            </div>:null
-                                    }
+                                    <span className="ico-action">
+                                        <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon>
+                                        <span className="tooltip">Ver pedido</span>
+                                    </span>
+                                    <span className="ico-action">
+                                        <FontAwesomeIcon icon={faBan}></FontAwesomeIcon>
+                                        <span className="tooltip">Desativar</span>
+                                    </span>
                                 </td>
                             </tr>
                         </tbody>

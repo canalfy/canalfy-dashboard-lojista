@@ -27,10 +27,14 @@ export const Menu = styled.nav`
         cursor: pointer;
         z-index: 0;
 
-        font-size: 1.4rem;
-        line-height: 4rem;
-        letter-spacing: .05rem;
-        color: rgba(255, 255, 255, 0.8);
+        a {
+            display: block;
+            font-size: 1.4rem;
+            line-height: 4rem;
+            letter-spacing: .05rem;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.8);
+        }
 
         transition: transform .5s ease-in-out, color .25s ease-in-out;
 

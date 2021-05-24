@@ -8,37 +8,38 @@ function Sidebar() {
             <GroupArea>
                 <TitleBar>Gerenciamento</TitleBar>
                 <Menu>
-                    <li><Link href="/gerenciamento/pedidos"><span>Pedidos</span></Link></li>
-                    <li><Link href="/gerenciamento/parceiros"><span>Parceiros</span></Link></li>
-                    <li><Link href="/gerenciamento/categoria-de-comissoes"><span>Categoria de Comissão</span></Link></li>
-                    <li><Link href="/gerenciamento/criativo"><span>Criativos</span></Link></li>
+                    <li><Link href="/"><a><span>Dashboard</span></a></Link></li>
+                    <li><Link href="/gerenciamento/pedidos"><a><span>Pedidos</span></a></Link></li>
+                    <li><Link href="/gerenciamento/parceiros"><a><span>Parceiros</span></a></Link></li>
+                    <li><Link href="/gerenciamento/categoria-de-comissoes"><a><span>Categoria de Comissão</span></a></Link></li>
+                    <li><Link href="/gerenciamento/criativo"><a><span>Criativos</span></a></Link></li>
                 </Menu>
             </GroupArea>
 
             <GroupArea>
                 <TitleBar>Gestão de Pagamento</TitleBar>
                 <Menu>
-                    <li><Link href="/gestao/comissoes"><span>Comissões</span></Link></li>
-                    <li><Link href="/gestao/pagamentos"><span>Repasse</span></Link></li>
+                    <li><Link href="/gestao/comissoes"><a><span>Comissões</span></a></Link></li>
+                    <li><Link href="/gestao/pagamentos"><a><span>Repasse</span></a></Link></li>
                 </Menu>
             </GroupArea>
 
             <GroupArea>
                 <TitleBar>Configurações</TitleBar>
                 <Menu>
-                    <li><Link href="/configuracoes/geral"><span>Geral</span></Link></li>
-                    <li><Link href="/configuracoes/perfil"><span>Perfil</span></Link></li>
-                    <li><Link href="/configuracoes/loja"><span>Loja</span></Link></li>
-                    <li><Link href="/configuracoes/ofertas"><span>Ofertas</span></Link></li>
-                    <li><Link href="/configuracoes/termos-e-politicas"><span>Termos e Políticas</span></Link></li>
-                    <li><Link href="/configuracoes/usuarios"><span>Usuários</span></Link></li>
-                    <li><Link href="/configuracoes/faturamento"><span>Faturamento</span></Link></li>
+                    <li><Link href="/configuracoes/geral"><a><span>Geral</span></a></Link></li>
+                    <li><Link href="/configuracoes/perfil"><a><span>Perfil</span></a></Link></li>
+                    <li><Link href="/configuracoes/loja"><a><span>Loja</span></a></Link></li>
+                    <li><Link href="/configuracoes/ofertas"><a><span>Ofertas</span></a></Link></li>
+                    <li><Link href="/configuracoes/termos-e-politicas"><a><span>Termos e Políticas</span></a></Link></li>
+                    <li><Link href="/configuracoes/usuarios"><a><span>Usuários</span></a></Link></li>
+                    <li><Link href="/configuracoes/faturamento"><a><span>Faturamento</span></a></Link></li>
                 </Menu>
             </GroupArea>
 
             <GroupArea>
                 <Menu>
-                    <li><Link href="/login"><span>Logout</span></Link></li>
+                    <li><Link href="/login"><a><span>Logout</span></a></Link></li>
                 </Menu>
             </GroupArea>
         </div>

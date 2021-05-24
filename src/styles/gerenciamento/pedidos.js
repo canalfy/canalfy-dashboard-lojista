@@ -38,9 +38,16 @@ export const TitleArea = styled.div`
     }
 
     h2 {
+        margin-bottom: 20px;
+
         font-size: 4.2rem;
         line-height: 6rem;
         color: rgba(255,255,255,.8);
+    }
+
+    p {
+        font-size: 1.4rem;
+        line-height: 2rem;
     }
 `
 
@@ -51,18 +58,10 @@ export const FilterArea = styled.div`
     width: 100%;
     height: auto;
 
-    .filters {
+    .orders {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-
-        .input:first-child {
-            margin-right: 10px;
-        }
-
-        .input:last-child {
-            margin-left: 10px;
-        }
 
         .input label {
             display: block;
@@ -95,21 +94,33 @@ export const FilterArea = styled.div`
     }
 
     .download {
-        svg {
-            width: auto !important;
+        .export-btn {
+            padding: 10px 20px;
+
+            background: #01C253;
+            border-radius: 5px;
+
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 800;
 
             cursor: pointer;
-        }
 
-        .svg-inline--fa {
-            height: 15px !important;
+            svg {
+                width: auto !important;
+                margin-left: 5px;
+            }
+
+            .svg-inline--fa {
+                height: 15px !important;
+            }
         }
     }
 
     @media screen and (max-width: 768px) {
         display: block;
 
-        .filters {
+        .orders {
             margin-bottom: 20px;
         }
     }
@@ -131,45 +142,45 @@ export const TabArea = styled.div`
         height: 40px;
     }
 
-    table tbody tr {
-        &:hover {
-            background: rgba(255, 255, 255, 0.05);
-
-            cursor: pointer;
-        }
-    }
-
     table tr th, table tr td {
         font-size: 1.2rem;
+        line-height: 1.6rem;
         text-align: left;
     }
 
     .actions {
-        position: relative;
+        display: flex;
+        gap: 10px;
 
-        .options {
-            position: absolute;
-            top: 20px;
-            left: 0;
-            padding: 20px;
+        .ico-action {
+            position: relative;
 
-            background: #152937;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,.15);
+            cursor: pointer;
 
-            z-index: 20;
-
-            li {
-                list-style: none;
+            svg {
+                width: auto !important;
+                height: 13px;
             }
 
-            a {
-                color: rgba(255, 255, 255, 0.8);
-                text-decoration: none;
+            .tooltip {
+                position: absolute;
+                top: -25px;
+                left: 0;
 
-                &:hover {
-                    text-decoration: underline;
-                }
+                padding: 5px 15px;
+
+                content: '';
+
+                background: #fff;
+                border-radius: 15px;
+
+                color: #212121;
+
+                display: none;
+            }
+
+            &:hover .tooltip {
+                display: block;
             }
         }
     }
@@ -195,7 +206,7 @@ export const TabArea = styled.div`
             border: none;
             position: relative;
             padding-left: 50%;
-            height: 30px;
+            height: 40px;
             line-height: 3rem;
         }
 

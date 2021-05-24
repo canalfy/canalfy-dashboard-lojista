@@ -38,9 +38,16 @@ export const TitleArea = styled.div`
     }
 
     h2 {
+        margin-bottom: 20px;
+
         font-size: 4.2rem;
         line-height: 6rem;
         color: rgba(255,255,255,.8);
+    }
+
+    p {
+        font-size: 1.4rem;
+        line-height: 2rem;
     }
 `
 
@@ -51,18 +58,10 @@ export const FilterArea = styled.div`
     width: 100%;
     height: auto;
 
-    .filters {
+    .orders {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-
-        .input:first-child {
-            margin-right: 10px;
-        }
-
-        .input:last-child {
-            margin-left: 10px;
-        }
 
         .input label {
             display: block;
@@ -95,21 +94,33 @@ export const FilterArea = styled.div`
     }
 
     .download {
-        svg {
-            width: auto !important;
+        .export-btn {
+            padding: 10px 20px;
+
+            background: #01C253;
+            border-radius: 5px;
+
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 800;
 
             cursor: pointer;
-        }
 
-        .svg-inline--fa {
-            height: 15px !important;
+            svg {
+                width: auto !important;
+                margin-left: 5px;
+            }
+
+            .svg-inline--fa {
+                height: 15px !important;
+            }
         }
     }
 
     @media screen and (max-width: 768px) {
         display: block;
 
-        .filters {
+        .orders {
             margin-bottom: 20px;
         }
     }
@@ -124,19 +135,11 @@ export const TabArea = styled.div`
 
     table tr {
         display: grid;
-        grid-template-columns: repeat(5,1fr);
+        grid-template-columns: repeat(6,1fr);
         gap: 20px;
         justify-content: center;
         align-items: center;
         height: 40px;
-    }
-
-    table tbody tr {
-        &:hover {
-            background: rgba(255, 255, 255, 0.05);
-
-            cursor: pointer;
-        }
     }
 
     table tr th, table tr td {
@@ -144,11 +147,48 @@ export const TabArea = styled.div`
         text-align: left;
     }
 
+    .actions {
+        display: flex;
+        gap: 10px;
+
+        .ico-action {
+            position: relative;
+
+            cursor: pointer;
+
+            svg {
+                width: auto !important;
+                height: 13px;
+            }
+
+            .tooltip {
+                position: absolute;
+                top: -25px;
+                left: 0;
+
+                padding: 5px 15px;
+
+                content: '';
+
+                background: #fff;
+                border-radius: 15px;
+
+                color: #212121;
+
+                display: none;
+            }
+
+            &:hover .tooltip {
+                display: block;
+            }
+        }
+    }
+
     @media screen and (max-width: 768px) {
         table tr {
             display: block;
             height: auto;
-            padding: 20px;
+            padding: 20px 0;
         }
 
         table, thead, tbody, th, td, tr { 
@@ -182,7 +222,8 @@ export const TabArea = styled.div`
         td:nth-of-type(1):before { content: "Oferta"; }
         td:nth-of-type(2):before { content: "Tipo"; }
         td:nth-of-type(3):before { content: "Receita"; }
-        td:nth-of-type(4):before { content: "Afiliados"; }
-        td:nth-of-type(5):before { content: "Ações"; }
+        td:nth-of-type(4):before { content: "% de Parceiros"; }
+        td:nth-of-type(5):before { content: "Total de Parceiros"; }
+        td:nth-of-type(6):before { content: "Ações"; }
     }
 `
