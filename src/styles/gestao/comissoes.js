@@ -51,18 +51,10 @@ export const FilterArea = styled.div`
     width: 100%;
     height: auto;
 
-    .filters {
+    .orders {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-
-        .input:first-child {
-            margin-right: 10px;
-        }
-
-        .input:last-child {
-            margin-left: 10px;
-        }
 
         .input label {
             display: block;
@@ -95,22 +87,222 @@ export const FilterArea = styled.div`
     }
 
     .download {
-        svg {
-            width: auto !important;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+
+        .export-btn {
+            padding: 10px 20px;
+
+            background: #01C253;
+            border-radius: 5px;
+            border: 1px solid #01C253;
+
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 800;
+            letter-spacing: .05rem;
 
             cursor: pointer;
+
+            svg {
+                width: auto !important;
+                margin-left: 5px;
+            }
+
+            .svg-inline--fa {
+                height: 15px !important;
+            }
         }
 
-        .svg-inline--fa {
-            height: 15px !important;
+        .filter-trigger {
+            padding: 10px 20px;
+
+            background: #0e1b25;
+            border-radius: 5px;
+            border: 1px solid #01C253;
+
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 800;
+            letter-spacing: .05rem;
+
+            cursor: pointer;
+
+            svg {
+                width: auto !important;
+                margin-left: 5px;
+            }
+
+            .svg-inline--fa {
+                height: 15px !important;
+            }
         }
     }
 
     @media screen and (max-width: 768px) {
         display: block;
 
-        .filters {
+        .orders {
             margin-bottom: 20px;
+        }
+    }
+`
+
+export const FilterBox = styled.section`
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+
+    background: rgba(14,24,37,.95);
+
+    z-index: 50;
+
+    display: none;
+
+    &.active-box {
+        display: flex;
+    }
+
+    .filter-wrap {
+        position: relative;
+
+        width: 580px;
+        max-width: 580px;
+        height: auto;
+        padding: 40px 20px;
+
+        background: #0e1b25;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0,0,0,.25);
+
+        .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+
+            h4 {
+                font-size: 2.4rem;
+                line-height: 2rem;
+                letter-spacing: .05rem;
+            }
+
+            svg {
+                cursor: pointer;
+            }
+        }
+
+        .form {
+            .input {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 20px;
+                margin-bottom: 20px;
+
+                label, p {
+                    font-size: 1.2rem;
+                    line-height: 2rem;
+                    font-weight: 400;
+                    color: rgba(255,255,255,.6);
+                }
+
+                input, select {
+                    padding: 10px 20px;
+                    margin-top: 5px;
+
+                    background: transparent;
+                    border: 1px solid rgba(255,255,255,.4);
+
+                    font-family: 'Poppins';
+                    font-size: 1rem;
+                    font-weight: 400;
+                    color: rgba(255,255,255,.6);
+                }
+
+                option {
+                    background: #0e1b25;
+
+                    font-family: 'Poppins';
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    color: rgba(255,255,255,.6);
+                }
+
+                .date-picker {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+                }
+
+                .radio-options {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 20px;
+
+                    div {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 5px;
+
+                        input {
+                            width: 15px;
+                            height: 15px;
+                        }
+                    }
+                }
+            }
+
+            .buttons {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 20px;
+                margin-top: 40px;
+
+                button, span {
+                    padding: 10px 25px;
+
+                    background: inherit;
+                    border: none;
+                    border-radius: 5px;
+
+                    appearance: none;
+                    cursor: pointer;
+
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    letter-spacing: .05rem;
+                    font-family: 'Poppins';
+                    color: #fff;
+
+                    svg {
+                        margin-right: 5px;
+                    }
+                }
+
+                .close-btn {
+                    background: #C22115;
+                }
+
+                .submit-btn {
+                    background: #01C253;
+                }
+            }
         }
     }
 `
@@ -124,31 +316,61 @@ export const TabArea = styled.div`
 
     table tr {
         display: grid;
-        grid-template-columns: repeat(8,1fr);
+        grid-template-columns: repeat(9,1fr);
         gap: 20px;
         justify-content: center;
         align-items: center;
         height: 40px;
     }
 
-    table tbody tr {
-        &:hover {
-            background: rgba(255, 255, 255, 0.05);
-
-            cursor: pointer;
-        }
-    }
-
     table tr th, table tr td {
         font-size: 1.2rem;
+        line-height: 1.6rem;
         text-align: left;
+    }
+
+    .actions {
+        display: flex;
+        gap: 10px;
+
+        .ico-action {
+            position: relative;
+
+            cursor: pointer;
+
+            svg {
+                width: auto !important;
+                height: 13px;
+            }
+
+            .tooltip {
+                position: absolute;
+                top: -25px;
+                left: 0;
+
+                padding: 5px 15px;
+
+                content: '';
+
+                background: #fff;
+                border-radius: 15px;
+
+                color: #212121;
+
+                display: none;
+            }
+
+            &:hover .tooltip {
+                display: block;
+            }
+        }
     }
 
     @media screen and (max-width: 768px) {
         table tr {
             display: block;
             height: auto;
-            padding: 20px;
+            padding: 20px 0;
         }
 
         table, thead, tbody, th, td, tr { 
@@ -165,8 +387,8 @@ export const TabArea = styled.div`
             border: none;
             position: relative;
             padding-left: 50%;
-            height: 30px;
-            line-height: 3rem;
+            height: 40px;
+            line-height: 4rem;
         }
 
         td:before { 
@@ -180,12 +402,13 @@ export const TabArea = styled.div`
         }
 
         td:nth-of-type(1):before { content: "Nome do Parceiro"; }
-        td:nth-of-type(2):before { content: "Receita Gerada"; }
-        td:nth-of-type(3):before { content: "Qtd. de Pedidos"; }
-        td:nth-of-type(4):before { content: "Valor da Comissão"; }
-        td:nth-of-type(5):before { content: "Data de Pagamento"; }
-        td:nth-of-type(6):before { content: "Status"; }
-        td:nth-of-type(7):before { content: "Comprovante"; }
-        td:nth-of-type(8):before { content: "Ações"; }
+        td:nth-of-type(2):before { content: "Código do Pedido"; }
+        td:nth-of-type(3):before { content: "Data"; }
+        td:nth-of-type(4):before { content: "Valor do Pedido"; }
+        td:nth-of-type(5):before { content: "Valor da Comissão"; }
+        td:nth-of-type(6):before { content: "Status do Pedido"; }
+        td:nth-of-type(7):before { content: "Status da Comissão"; }
+        td:nth-of-type(8):before { content: "Comprovante"; }
+        td:nth-of-type(9):before { content: "Ações"; }
     }
 `

@@ -157,6 +157,163 @@ export const FilterArea = styled.div`
     }
 `
 
+export const FilterBox = styled.section`
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+
+    background: rgba(14,24,37,.95);
+
+    z-index: 50;
+
+    display: none;
+
+    &.active-box {
+        display: flex;
+    }
+
+    .filter-wrap {
+        position: relative;
+
+        width: 580px;
+        max-width: 580px;
+        height: auto;
+        padding: 40px 20px;
+
+        background: #0e1b25;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0,0,0,.25);
+
+        .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+
+            h4 {
+                font-size: 2.4rem;
+                line-height: 2rem;
+                letter-spacing: .05rem;
+            }
+
+            svg {
+                cursor: pointer;
+            }
+        }
+
+        .form {
+            .input {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 20px;
+                margin-bottom: 20px;
+
+                label, p {
+                    font-size: 1.2rem;
+                    line-height: 2rem;
+                    font-weight: 400;
+                    color: rgba(255,255,255,.6);
+                }
+
+                input, select {
+                    padding: 10px 20px;
+                    margin-top: 5px;
+
+                    background: transparent;
+                    border: 1px solid rgba(255,255,255,.4);
+
+                    font-family: 'Poppins';
+                    font-size: 1rem;
+                    font-weight: 400;
+                    color: rgba(255,255,255,.6);
+                }
+
+                option {
+                    background: #0e1b25;
+
+                    font-family: 'Poppins';
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    color: rgba(255,255,255,.6);
+                }
+
+                .date-picker {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+                }
+
+                .radio-options {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 20px;
+
+                    div {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 5px;
+
+                        input {
+                            width: 15px;
+                            height: 15px;
+                        }
+                    }
+                }
+            }
+
+            .buttons {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 20px;
+                margin-top: 40px;
+
+                button, span {
+                    padding: 10px 25px;
+
+                    background: inherit;
+                    border: none;
+                    border-radius: 5px;
+
+                    appearance: none;
+                    cursor: pointer;
+
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    letter-spacing: .05rem;
+                    font-family: 'Poppins';
+                    color: #fff;
+
+                    svg {
+                        margin-right: 5px;
+                    }
+                }
+
+                .close-btn {
+                    background: #C22115;
+                }
+
+                .submit-btn {
+                    background: #01C253;
+                }
+            }
+        }
+    }
+`
+
 export const TabArea = styled.div`
     margin: 40px 0;
 
