@@ -20,6 +20,7 @@ function Sidebar() {
                 <TitleBar>Gestão de Pagamento</TitleBar>
                 <Menu>
                     <li><Link href="/gestao/comissoes"><a><span>Comissões</span></a></Link></li>
+                    <li><Link href="/gestao/consolidacoes"><a><span>Consolidações</span></a></Link></li>
                 </Menu>
             </GroupArea>
 

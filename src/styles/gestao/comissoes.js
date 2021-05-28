@@ -38,9 +38,16 @@ export const TitleArea = styled.div`
     }
 
     h2 {
+        margin-bottom: 20px;
+
         font-size: 4.2rem;
         line-height: 6rem;
         color: rgba(255,255,255,.8);
+    }
+
+    p {
+        font-size: 1.4rem;
+        line-height: 2rem;
     }
 `
 
@@ -316,7 +323,7 @@ export const TabArea = styled.div`
 
     table tr {
         display: grid;
-        grid-template-columns: repeat(9,1fr);
+        grid-template-columns: repeat(9, 1fr);
         gap: 20px;
         justify-content: center;
         align-items: center;

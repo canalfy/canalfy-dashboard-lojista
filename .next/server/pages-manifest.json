@@ -20,6 +20,7 @@
   "/gerenciamento/pedidos": "pages/gerenciamento/pedidos.html",
   "/gerenciamento/perfil": "pages/gerenciamento/perfil.html",
   "/gestao/comissoes": "pages/gestao/comissoes.html",
+  "/gestao/consolidacoes": "pages/gestao/consolidacoes.html",
   "/": "pages/index.html",
   "/login": "pages/login.html",
   "/_error": "pages/_error.js",

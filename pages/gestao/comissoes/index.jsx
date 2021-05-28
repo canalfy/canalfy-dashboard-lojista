@@ -6,7 +6,7 @@ import { TitleArea, FilterArea, FilterBox, TabArea } from '../../../src/styles/g
 import Layout from '../../../src/components/layout'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload, faFilter, faExternalLinkAlt, faDollarSign, faTrash, faTimes, faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faDownload, faFilter, faExternalLinkAlt, faDollarSign, faTimes, faSearch } from "@fortawesome/free-solid-svg-icons";
 
 function ComissionManagement() {
 
@@ -22,6 +22,8 @@ function ComissionManagement() {
                 <TitleArea>
                     <div className="breadcrumb"><Link href="/">Dashboard</Link> / Gestão de Comissões</div>
                     <div className="title"><h2>Gestão de Comissões</h2></div>
+
+                    <p>Gestão de pedidos em aberto para serem consolidados.</p>
                 </TitleArea>
 
                 <FilterArea>
@@ -40,7 +42,7 @@ function ComissionManagement() {
                     
                     <div className="download">
                         <span className="filter-trigger" onClick={handleToggle}>
-                            Filtrar Pedidos
+                            Filtrar
                             <FontAwesomeIcon icon={faFilter}></FontAwesomeIcon>
                         </span>
                         <span className="export-btn">
@@ -149,40 +151,36 @@ function ComissionManagement() {
                     <table>
                         <thead>
                             <tr>
+                                <th>ID do Pedido</th>
                                 <th>Nome do Parceiro</th>
-                                <th>Código do Pedido</th>
-                                <th>Data</th>
+                                <th>Data do Pedido</th>
+                                <th>Data do Pagamento</th>
                                 <th>Valor do Pedido</th>
                                 <th>Valor da Comissão</th>
-                                <th>Status do Pedido</th>
+                                <th>Cupom</th>
                                 <th>Status da Comissão</th>
-                                <th>Comprovante</th>
                                 <th>Ações</th>
                             </tr>
                         </thead>
 
                         <tbody>
                             <tr>
-                                <td>John Doe</td>
                                 <td>1234</td>
+                                <td>John Doe</td>
+                                <td>12/03/2021</td>
                                 <td>12/03/2021</td>
                                 <td>R$ 356,00</td>
                                 <td>R$ 35,60</td>
-                                <td><span className="success">Finalizado</span></td>
-                                <td><span className="error">Atrasado</span></td>
-                                <td></td>
+                                <td>Não</td>
+                                <td><span className="att">Em aberto</span></td>
                                 <td className="actions">
                                     <span className="ico-action">
-                                        <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon>
-                                        <span className="tooltip">Ver pedido</span>
-                                    </span>
-                                    <span className="ico-action">
                                         <FontAwesomeIcon icon={faDollarSign}></FontAwesomeIcon>
-                                        <span className="tooltip">Pagar</span>
+                                        <span className="tooltip">Consolidar</span>
                                     </span>
                                     <span className="ico-action">
-                                        <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
-                                        <span className="tooltip">Excluir</span>
+                                        <FontAwesomeIcon icon={faExternalLinkAlt}></FontAwesomeIcon>
+                                        <span className="tooltip">Detalhes</span>
                                     </span>
                                 </td>
                             </tr>
